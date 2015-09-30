@@ -1,24 +1,19 @@
-<<<<<<< HEAD
+
 package ClassesPrincipais;
 
-public class Jogador {
-
-}
-=======
-package ClassesPrincipais;
+import java.util.Date;
 
 public class Jogador {
-	public String Nome;
-	public int dataNascim;
+	public String nome;
 	public String posicao;
-	public int altura;
-	public float peso;
-	public String timeAtual;
-	public String estado;
+	public double registro;
 	public String cidade;
-	
-	public double RegJogador;
-	
+	public String estado;
+	public String CPF;
+	public double RG;
+	public Date DataNascimento;
+	public double telefone;
+	public String email;
 	public double passe;
 }
->>>>>>> origin/master
+
