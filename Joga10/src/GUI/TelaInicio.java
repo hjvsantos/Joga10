@@ -40,7 +40,7 @@ public class TelaInicio {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(new Color(30, 144, 255));
+		frame.getContentPane().setBackground(new Color(169, 169, 169));
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
