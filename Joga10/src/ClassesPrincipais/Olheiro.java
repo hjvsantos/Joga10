@@ -15,10 +15,11 @@ public class Olheiro {
 	public Date DataNascimento;
 	public double telefone;
 	public String email;
+	public double preçoServiço;
 	
 	public Olheiro(String nome, String empregador, double registro,
 			String cidade, String estado, String cPF, double rG,
-			Date dataNascimento, double telefone, String email) {
+			Date dataNascimento, double telefone, String email, double preçoServiço) {
 	
 		this.nome = nome;
 		this.empregador = empregador;
@@ -30,7 +31,90 @@ public class Olheiro {
 		DataNascimento = dataNascimento;
 		this.telefone = telefone;
 		this.email = email;
+		this.preçoServiço = preçoServiço;
+		
 	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getEmpregador() {
+		return empregador;
+	}
+
+	public void setEmpregador(String empregador) {
+		this.empregador = empregador;
+	}
+
+	public double getRegistro() {
+		return registro;
+	}
+
+	public void setRegistro(double registro) {
+		this.registro = registro;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public String getCPF() {
+		return CPF;
+	}
+
+	public void setCPF(String cPF) {
+		CPF = cPF;
+	}
+
+	public double getRG() {
+		return RG;
+	}
+
+	public void setRG(double rG) {
+		RG = rG;
+	}
+
+	public Date getDataNascimento() {
+		return DataNascimento;
+	}
+
+	public void setDataNascimento(Date dataNascimento) {
+		DataNascimento = dataNascimento;
+	}
+
+	public double getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(double telefone) {
+		this.telefone = telefone;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	
 	
 	
 }
