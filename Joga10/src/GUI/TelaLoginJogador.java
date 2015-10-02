@@ -4,10 +4,16 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.Font;
 
 public class TelaLoginJogador {
 
 	private JFrame frame;
+	private JTextField textField;
+	private JTextField textField_1;
 
 	/**
 	 * Launch the application.
@@ -41,6 +47,36 @@ public class TelaLoginJogador {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		
+		JLabel lblUsuario = new JLabel("Usuario:");
+		lblUsuario.setBounds(59, 100, 46, 14);
+		frame.getContentPane().add(lblUsuario);
+		
+		JLabel lblSenha = new JLabel("Senha:");
+		lblSenha.setBounds(59, 144, 46, 14);
+		frame.getContentPane().add(lblSenha);
+		
+		textField = new JTextField();
+		textField.setBounds(135, 97, 161, 20);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(135, 141, 161, 20);
+		frame.getContentPane().add(textField_1);
+		textField_1.setColumns(10);
+		
+		JButton btnEntrar = new JButton("Entrar");
+		btnEntrar.setBounds(170, 189, 89, 23);
+		frame.getContentPane().add(btnEntrar);
+		
+		JButton btnVoltar = new JButton("Voltar");
+		btnVoltar.setBounds(170, 223, 89, 23);
+		frame.getContentPane().add(btnVoltar);
+		
+		JLabel lblJogador = new JLabel("Jogador");
+		lblJogador.setFont(new Font("Franklin Gothic Demi", Font.PLAIN, 16));
+		lblJogador.setBounds(181, 37, 89, 30);
+		frame.getContentPane().add(lblJogador);
 	}
-
 }
