@@ -4,6 +4,8 @@ import java.util.Date;
 
 public class Goleiro extends Jogador{
 
+
+	
 	public Goleiro(String nome, String posicao, double registro, String cidade,
 			String estado, String cPF, double rG, Date dataNascimento,
 			double telefone, String email, double passe, float altura,
