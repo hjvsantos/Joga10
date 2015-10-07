@@ -9,7 +9,7 @@ public class Jogador {
 	public String cidade;
 	public String estado;
 	public String CPF;
-	public double RG;
+	public String RG;
 	public Date DataNascimento;
 	public String telefone;
 	public String email;
@@ -17,11 +17,13 @@ public class Jogador {
 	public float altura;
 	public float peso;
 	public String timeAtual;
+	public String usuario;
+	public String senha;
 
 
-	public Jogador(String nome, String posicao, double registro, String cidade, String estado, String cPF, double rG,
+	public Jogador(String nome, String posicao, double registro, String cidade, String estado, String cPF, String rG,
 			Date dataNascimento, String telefone, String email, double passe, float altura, float peso,
-			String timeAtual) {
+			String timeAtual, String usuario, String senha) {
 		
 		this.nome = nome;
 		this.posicao = posicao;
@@ -29,7 +31,7 @@ public class Jogador {
 		this.cidade = cidade;
 		this.estado = estado;
 		CPF = cPF;
-		RG = rG;
+		this.RG = rG;
 		DataNascimento = dataNascimento;
 		this.telefone = telefone;
 		this.email = email;
@@ -37,8 +39,26 @@ public class Jogador {
 		this.altura = altura;
 		this.peso = peso;
 		this.timeAtual = timeAtual;
+		this.usuario = usuario;
+		this.senha = senha;
 	}
 
+	public String getSenha(){
+		return senha;
+	}
+	
+	
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 
 	public String getNome() {
 		return nome;
@@ -100,12 +120,12 @@ public class Jogador {
 	}
 
 
-	public double getRG() {
+	public String getRG() {
 		return RG;
 	}
 
 
-	public void setRG(double rG) {
+	public void setRG(String rG) {
 		RG = rG;
 	}
 

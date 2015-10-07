@@ -9,7 +9,7 @@ public class Goleiro extends Jogador{
 	public double tempoSemLevarGol;
 	
 	public Goleiro(String nome, String posicao, double registro, String cidade,
-			String estado, String cPF, double rG, Date dataNascimento,
+			String estado, String cPF, String rG, Date dataNascimento,
 			String telefone, String email, double passe, float altura,
 			float peso, String timeAtual, int numeroDeGols, int penaltisDefendidos, double tempoSemLevarGol) {
 		super(nome, posicao, registro, cidade, estado, cPF, rG, dataNascimento,

@@ -13,10 +13,13 @@ public class Time {
 	public String codigo; //Algo que funcione como o registro do time
 	private ArrayList<Olheiro> olheiros = new ArrayList<Olheiro>();
 	private ArrayList<Jogador> jogadoresObservados = new ArrayList<Jogador>();
+	public String usuario;
+	public String senha;
+	public String inscricao;
 	
 	public Time(String nome, String estado, String cidade, String pais,
 			String email, double telefone, String codigo,
-			ArrayList<Olheiro> olheiros, ArrayList<Jogador> jogadoresObservados) {
+			ArrayList<Olheiro> olheiros, ArrayList<Jogador> jogadoresObservados, String senha, String usuario, String inscricao) {
 	
 		this.nome = nome;
 		Estado = estado;
@@ -27,7 +30,61 @@ public class Time {
 		this.codigo = codigo;
 		this.olheiros = olheiros;
 		this.jogadoresObservados = jogadoresObservados;
+		this.senha = senha;
+		this.usuario = usuario;
+		this.inscricao = inscricao;
 	}
+
+	
+	
+	public ArrayList<Olheiro> getOlheiros() {
+		return olheiros;
+	}
+
+
+
+	public void setOlheiros(ArrayList<Olheiro> olheiros) {
+		this.olheiros = olheiros;
+	}
+
+
+	
+	
+	public String getInscricao() {
+		return inscricao;
+	}
+
+
+
+	public void setInscricao(String inscricao) {
+		this.inscricao = inscricao;
+	}
+
+
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
+
+
+	public String getSenha() {
+		return senha;
+	}
+
+
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+
 
 	public String getNome() {
 		return nome;

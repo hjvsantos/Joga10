@@ -8,12 +8,13 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
+import javax.swing.JPasswordField;
 
 public class TelaLoginJogador {
 
 	private JFrame frame;
 	private JTextField textField;
-	private JTextField textField_1;
+	private JPasswordField passwordField;
 
 	/**
 	 * Launch the application.
@@ -61,11 +62,6 @@ public class TelaLoginJogador {
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(135, 141, 161, 20);
-		frame.getContentPane().add(textField_1);
-		textField_1.setColumns(10);
-		
 		JButton btnEntrar = new JButton("Entrar");
 		btnEntrar.setBounds(170, 189, 89, 23);
 		frame.getContentPane().add(btnEntrar);
@@ -78,5 +74,9 @@ public class TelaLoginJogador {
 		lblJogador.setFont(new Font("Franklin Gothic Demi", Font.PLAIN, 16));
 		lblJogador.setBounds(181, 37, 89, 30);
 		frame.getContentPane().add(lblJogador);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(138, 141, 158, 20);
+		frame.getContentPane().add(passwordField);
 	}
 }

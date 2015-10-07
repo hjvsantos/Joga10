@@ -16,10 +16,12 @@ public class Olheiro {
 	public double telefone;
 	public String email;
 	public double preçoServiço;
+	public String usuario;
+	public String senha;
 	
 	public Olheiro(String nome, String empregador, double registro,
 			String cidade, String estado, String cPF, double rG,
-			Date dataNascimento, double telefone, String email, double preçoServiço) {
+			Date dataNascimento, double telefone, String email, double preçoServiço, String usuario, String senha) {
 	
 		this.nome = nome;
 		this.empregador = empregador;
@@ -32,8 +34,48 @@ public class Olheiro {
 		this.telefone = telefone;
 		this.email = email;
 		this.preçoServiço = preçoServiço;
+		this.usuario = usuario;
+		this.senha = senha;
 		
 	}
+
+	
+	
+	public double getPreçoServiço() {
+		return preçoServiço;
+	}
+
+
+
+	public void setPreçoServiço(double preçoServiço) {
+		this.preçoServiço = preçoServiço;
+	}
+
+
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+	}
+
+
+
+	public String getSenha() {
+		return senha;
+	}
+
+
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+
 
 	public String getNome() {
 		return nome;
