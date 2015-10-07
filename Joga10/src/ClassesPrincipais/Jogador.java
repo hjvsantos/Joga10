@@ -11,7 +11,7 @@ public class Jogador {
 	public String CPF;
 	public double RG;
 	public Date DataNascimento;
-	public double telefone;
+	public String telefone;
 	public String email;
 	public double passe;
 	public float altura;
@@ -20,7 +20,7 @@ public class Jogador {
 
 
 	public Jogador(String nome, String posicao, double registro, String cidade, String estado, String cPF, double rG,
-			Date dataNascimento, double telefone, String email, double passe, float altura, float peso,
+			Date dataNascimento, String telefone, String email, double passe, float altura, float peso,
 			String timeAtual) {
 		
 		this.nome = nome;
@@ -120,12 +120,12 @@ public class Jogador {
 	}
 
 
-	public double getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
 
 
-	public void setTelefone(double telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 
