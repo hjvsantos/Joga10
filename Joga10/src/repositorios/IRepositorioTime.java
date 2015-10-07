@@ -1,8 +1,8 @@
-package Repositorios;
+package repositorios;
 
 import java.util.List;
 
-import ClassesPrincipais.Time;
+import classesPrincipais.Time;
 
 public interface IRepositorioTime {
 

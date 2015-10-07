@@ -1,8 +1,8 @@
-package Repositorios;
+package repositorios;
 
 import java.util.List;
 
-import ClassesPrincipais.Jogador;
+import classesPrincipais.Jogador;
 
 
 public interface IRepositorioJogador {

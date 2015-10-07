@@ -1,4 +1,4 @@
-package GUI;
+package gui;
 
 import java.awt.EventQueue;
 
@@ -10,10 +10,10 @@ import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.JPasswordField;
 
-public class TelaLoginJogador {
+public class TelaLoginTime {
 
 	private JFrame frame;
-	private JTextField textField;
+	private JTextField textField_1;
 	private JPasswordField passwordField;
 
 	/**
@@ -23,7 +23,7 @@ public class TelaLoginJogador {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaLoginJogador window = new TelaLoginJogador();
+					TelaLoginTime window = new TelaLoginTime();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -35,7 +35,7 @@ public class TelaLoginJogador {
 	/**
 	 * Create the application.
 	 */
-	public TelaLoginJogador() {
+	public TelaLoginTime() {
 		initialize();
 	}
 
@@ -45,38 +45,40 @@ public class TelaLoginJogador {
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(169, 169, 169));
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblUsuario = new JLabel("Usuario:");
-		lblUsuario.setBounds(59, 100, 46, 14);
-		frame.getContentPane().add(lblUsuario);
+		JLabel lblUsurio = new JLabel("Usu\u00E1rio:");
+		lblUsurio.setBounds(54, 92, 46, 14);
+		frame.getContentPane().add(lblUsurio);
 		
 		JLabel lblSenha = new JLabel("Senha:");
-		lblSenha.setBounds(59, 144, 46, 14);
+		lblSenha.setBounds(54, 132, 46, 14);
 		frame.getContentPane().add(lblSenha);
 		
-		textField = new JTextField();
-		textField.setBounds(135, 97, 161, 20);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
+		textField_1 = new JTextField();
+		textField_1.setText(" ");
+		textField_1.setBounds(110, 89, 176, 20);
+		frame.getContentPane().add(textField_1);
+		textField_1.setColumns(10);
 		
 		JButton btnEntrar = new JButton("Entrar");
-		btnEntrar.setBounds(170, 189, 89, 23);
+		btnEntrar.setBounds(154, 183, 89, 23);
 		frame.getContentPane().add(btnEntrar);
 		
 		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setBounds(170, 223, 89, 23);
+		btnVoltar.setBounds(154, 217, 89, 23);
 		frame.getContentPane().add(btnVoltar);
 		
-		JLabel lblJogador = new JLabel("Jogador");
-		lblJogador.setFont(new Font("Franklin Gothic Demi", Font.PLAIN, 16));
-		lblJogador.setBounds(181, 37, 89, 30);
-		frame.getContentPane().add(lblJogador);
+		JLabel lblTime = new JLabel("Time");
+		lblTime.setFont(new Font("Impact", Font.PLAIN, 18));
+		lblTime.setBounds(173, 45, 51, 23);
+		frame.getContentPane().add(lblTime);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(138, 141, 158, 20);
+		passwordField.setBounds(110, 129, 176, 20);
 		frame.getContentPane().add(passwordField);
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
+
 }

@@ -1,4 +1,4 @@
-package GUI;
+package gui;
 
 import java.awt.EventQueue;
 
@@ -10,7 +10,7 @@ import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.JPasswordField;
 
-public class TelaLoginOlheiro {
+public class TelaLoginJogador {
 
 	private JFrame frame;
 	private JTextField textField;
@@ -23,7 +23,7 @@ public class TelaLoginOlheiro {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaLoginOlheiro window = new TelaLoginOlheiro();
+					TelaLoginJogador window = new TelaLoginJogador();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -35,7 +35,7 @@ public class TelaLoginOlheiro {
 	/**
 	 * Create the application.
 	 */
-	public TelaLoginOlheiro() {
+	public TelaLoginJogador() {
 		initialize();
 	}
 
@@ -50,33 +50,33 @@ public class TelaLoginOlheiro {
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblUsuario = new JLabel("Usuario:");
-		lblUsuario.setBounds(52, 109, 46, 14);
+		lblUsuario.setBounds(59, 100, 46, 14);
 		frame.getContentPane().add(lblUsuario);
 		
 		JLabel lblSenha = new JLabel("Senha:");
-		lblSenha.setBounds(52, 146, 46, 14);
+		lblSenha.setBounds(59, 144, 46, 14);
 		frame.getContentPane().add(lblSenha);
 		
 		textField = new JTextField();
-		textField.setBounds(126, 106, 181, 20);
+		textField.setBounds(135, 97, 161, 20);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
 		JButton btnEntrar = new JButton("Entrar");
-		btnEntrar.setBounds(168, 176, 89, 23);
+		btnEntrar.setBounds(170, 189, 89, 23);
 		frame.getContentPane().add(btnEntrar);
 		
 		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setBounds(168, 210, 89, 23);
+		btnVoltar.setBounds(170, 223, 89, 23);
 		frame.getContentPane().add(btnVoltar);
 		
-		JLabel lblOlheiro = new JLabel("Olheiro");
-		lblOlheiro.setFont(new Font("Impact", Font.PLAIN, 17));
-		lblOlheiro.setBounds(168, 50, 104, 23);
-		frame.getContentPane().add(lblOlheiro);
+		JLabel lblJogador = new JLabel("Jogador");
+		lblJogador.setFont(new Font("Franklin Gothic Demi", Font.PLAIN, 16));
+		lblJogador.setBounds(181, 37, 89, 30);
+		frame.getContentPane().add(lblJogador);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(126, 143, 181, 20);
+		passwordField.setBounds(138, 141, 158, 20);
 		frame.getContentPane().add(passwordField);
 	}
 }

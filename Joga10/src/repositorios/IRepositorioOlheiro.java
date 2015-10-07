@@ -1,9 +1,9 @@
-package Repositorios;
+package repositorios;
 
 import java.util.List;
 
-import ClassesPrincipais.Jogador;
-import ClassesPrincipais.Olheiro;
+import classesPrincipais.Jogador;
+import classesPrincipais.Olheiro;
 
 public interface IRepositorioOlheiro {
 
