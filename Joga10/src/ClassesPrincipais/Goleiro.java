@@ -9,11 +9,11 @@ public class Goleiro extends Jogador{
 	public double tempoSemLevarGol;
 	
 	public Goleiro(String nome, String posicao, double registro, String cidade,
-			String estado, String cPF, String rG, Date dataNascimento,
+			String estado, String cPF, String rG, Date dataNascimento,String usuario, String senha,
 			String telefone, String email, double passe, float altura,
 			float peso, String timeAtual, int numeroDeGols, int penaltisDefendidos, double tempoSemLevarGol) {
 		super(nome, posicao, registro, cidade, estado, cPF, rG, dataNascimento,
-				telefone, email, passe, altura, peso, timeAtual);
+				telefone, email, passe, altura, peso, timeAtual, usuario, senha);
 	
 			this.numeroDeGols = numeroDeGols;
 			this.penaltisDefendidos = penaltisDefendidos;
