@@ -8,12 +8,13 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
+import javax.swing.JPasswordField;
 
 public class TelaLoginOlheiro {
 
 	private JFrame frame;
 	private JTextField textField;
-	private JTextField textField_1;
+	private JPasswordField passwordField;
 
 	/**
 	 * Launch the application.
@@ -61,11 +62,6 @@ public class TelaLoginOlheiro {
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(126, 143, 181, 20);
-		frame.getContentPane().add(textField_1);
-		textField_1.setColumns(10);
-		
 		JButton btnEntrar = new JButton("Entrar");
 		btnEntrar.setBounds(168, 176, 89, 23);
 		frame.getContentPane().add(btnEntrar);
@@ -78,6 +74,9 @@ public class TelaLoginOlheiro {
 		lblOlheiro.setFont(new Font("Impact", Font.PLAIN, 17));
 		lblOlheiro.setBounds(168, 50, 104, 23);
 		frame.getContentPane().add(lblOlheiro);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(126, 143, 181, 20);
+		frame.getContentPane().add(passwordField);
 	}
-
 }

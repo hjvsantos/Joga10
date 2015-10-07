@@ -8,12 +8,13 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
+import javax.swing.JPasswordField;
 
 public class TelaLoginTime {
 
 	private JFrame frame;
-	private JTextField textField;
 	private JTextField textField_1;
+	private JPasswordField passwordField;
 
 	/**
 	 * Launch the application.
@@ -54,11 +55,6 @@ public class TelaLoginTime {
 		lblSenha.setBounds(54, 132, 46, 14);
 		frame.getContentPane().add(lblSenha);
 		
-		textField = new JTextField();
-		textField.setBounds(110, 129, 176, 20);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
-		
 		textField_1 = new JTextField();
 		textField_1.setText(" ");
 		textField_1.setBounds(110, 89, 176, 20);
@@ -77,6 +73,10 @@ public class TelaLoginTime {
 		lblTime.setFont(new Font("Impact", Font.PLAIN, 18));
 		lblTime.setBounds(173, 45, 51, 23);
 		frame.getContentPane().add(lblTime);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(110, 129, 176, 20);
+		frame.getContentPane().add(passwordField);
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
