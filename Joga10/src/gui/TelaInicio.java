@@ -3,9 +3,14 @@ package gui;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.UIManager;
+
 import java.awt.Color;
+
 import javax.swing.JLabel;
+
 import java.awt.Font;
+
 import javax.swing.JButton;
 
 public class TelaInicio {
@@ -38,7 +43,17 @@ public class TelaInicio {
 	/**
 	 * Initialize the contents of the frame.
 	 */
+	
+	
 	private void initialize() {
+		
+			
+			try { //aparencia do SO
+				UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+			} catch(Exception e) {
+				e.getStackTrace();
+			}
+			
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(169, 169, 169));
 		frame.setBounds(100, 100, 450, 300);
