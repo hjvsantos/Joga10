@@ -70,7 +70,7 @@ public class TelaCadastroTime {
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		JButton btnCadastrar = new JButton("Cadastrar");
+		JButton btnCadastrar = new JButton("Pr\u00F3ximo");
 		btnCadastrar.setBounds(96, 227, 89, 23);
 		frame.getContentPane().add(btnCadastrar);
 		
