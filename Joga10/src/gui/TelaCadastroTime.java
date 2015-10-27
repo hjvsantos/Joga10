@@ -128,4 +128,11 @@ public class TelaCadastroTime {
 		frame.getContentPane().add(textField_4);
 		textField_4.setColumns(10);
 	}
+
+	public void setVisible(boolean b) {
+		if(b == true)
+			frame.setVisible(b);
+		else
+			frame.setVisible(b);
+	}
 }

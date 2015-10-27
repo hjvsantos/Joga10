@@ -7,12 +7,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import java.awt.Color;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 
-public class TelaCadastroOlheiro {
+public class TelaCadastroJogador {
 
 	private JFrame frame;
 	private JTextField textField;
@@ -24,7 +21,7 @@ public class TelaCadastroOlheiro {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaCadastroOlheiro window = new TelaCadastroOlheiro();
+					TelaCadastroJogador window = new TelaCadastroJogador();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,7 +33,7 @@ public class TelaCadastroOlheiro {
 	/**
 	 * Create the application.
 	 */
-	public TelaCadastroOlheiro() {
+	public TelaCadastroJogador() {
 		initialize();
 	}
 
@@ -52,36 +49,24 @@ public class TelaCadastroOlheiro {
 		
 		JLabel lblJoga = new JLabel("Joga10!");
 		lblJoga.setFont(new Font("Motorwerk", Font.PLAIN, 25));
-		lblJoga.setBounds(152, 11, 108, 43);
+		lblJoga.setBounds(152, 24, 108, 43);
 		frame.getContentPane().add(lblJoga);
 		
-		JButton btnPrximo = new JButton("Pr\u00F3ximo");
-		btnPrximo.setBounds(241, 227, 89, 23);
-		frame.getContentPane().add(btnPrximo);
-		
-		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		btnVoltar.setBounds(91, 227, 89, 23);
-		frame.getContentPane().add(btnVoltar);
-		
 		JLabel lblNome = new JLabel("Nome:");
-		lblNome.setBounds(22, 65, 46, 14);
+		lblNome.setBounds(53, 74, 47, 26);
 		frame.getContentPane().add(lblNome);
 		
 		textField = new JTextField();
-		textField.setBounds(61, 62, 313, 20);
+		textField.setBounds(90, 74, 294, 26);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
+		
 	}
 
 	public void setVisible(boolean b) {
 		if(b == true)
 			frame.setVisible(b);
 		else
-			frame.setVisible(b);		
+			frame.setVisible(b);
 	}
-
 }

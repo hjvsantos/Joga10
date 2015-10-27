@@ -51,14 +51,33 @@ public class TelaCadastro {
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnJogador = new JButton("Jogador");
+		btnJogador.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaCadastro.setVisible(false); 
+				new TelaCadastroJogador().setVisible(true);
+			}
+		});
 		btnJogador.setBounds(156, 116, 89, 23);
 		frame.getContentPane().add(btnJogador);
 		
 		JButton btnOlheiro = new JButton("Olheiro");
+		btnOlheiro.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaCadastro.setVisible(false); 
+				new TelaCadastroOlheiro().setVisible(true);
+			}
+		});
+		
 		btnOlheiro.setBounds(156, 150, 89, 23);
 		frame.getContentPane().add(btnOlheiro);
 		
 		JButton btnTime = new JButton("Time");
+		btnTime.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaCadastro.setVisible(false); 
+				new TelaCadastroTime().setVisible(true);
+			}
+		});
 		btnTime.setBounds(156, 184, 89, 23);
 		frame.getContentPane().add(btnTime);
 		
