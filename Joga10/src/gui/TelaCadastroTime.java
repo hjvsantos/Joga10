@@ -8,15 +8,18 @@ import javax.swing.JLabel;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.SystemColor;
+
 import javax.swing.JTextField;
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
 import javax.swing.JComboBox;
 
 public class TelaCadastroTime {
 
-	private JFrame frame;
+	private static JFrame frame;
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -77,6 +80,8 @@ public class TelaCadastroTime {
 		JButton btnVoltar = new JButton(" Voltar");
 		btnVoltar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				TelaCadastroTime.setVisible(false);
+				new TelaCadastro().setVisible(true);
 			}
 		});
 		btnVoltar.setBounds(220, 227, 89, 23);
@@ -129,7 +134,7 @@ public class TelaCadastroTime {
 		textField_4.setColumns(10);
 	}
 
-	public void setVisible(boolean b) {
+	public static void setVisible(boolean b) {
 		if(b == true)
 			frame.setVisible(b);
 		else

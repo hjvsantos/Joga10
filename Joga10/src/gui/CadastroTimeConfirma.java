@@ -10,10 +10,12 @@ import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class CadastroTimeConfirma {
 
-	private JFrame frame;
+	private static JFrame frame;
 	private JTextField textField;
 	private JPasswordField passwordField;
 	private JPasswordField passwordField_1;
@@ -56,8 +58,8 @@ public class CadastroTimeConfirma {
 		lblJoga.setBounds(152, 24, 108, 43);
 		frame.getContentPane().add(lblJoga);
 		
-		JLabel lblTime = new JLabel("Time:");
-		lblTime.setBounds(58, 91, 36, 14);
+		JLabel lblTime = new JLabel("Usu\u00E1rio:");
+		lblTime.setBounds(47, 91, 47, 14);
 		frame.getContentPane().add(lblTime);
 		
 		textField = new JTextField();
@@ -66,7 +68,7 @@ public class CadastroTimeConfirma {
 		textField.setColumns(10);
 		
 		JLabel lblSenha = new JLabel("Senha:");
-		lblSenha.setBounds(47, 125, 46, 14);
+		lblSenha.setBounds(47, 122, 46, 14);
 		frame.getContentPane().add(lblSenha);
 		
 		passwordField = new JPasswordField();
@@ -86,7 +88,20 @@ public class CadastroTimeConfirma {
 		frame.getContentPane().add(btnCadastrar);
 		
 		JButton btnVoltar = new JButton("Voltar");
+		btnVoltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				CadastroTimeConfirma.setVisible(false);
+				new TelaCadastroTime().setVisible(true);
+			}
+		});
 		btnVoltar.setBounds(152, 213, 89, 23);
 		frame.getContentPane().add(btnVoltar);
+	}
+
+	protected static void setVisible(boolean b) {
+		if(b == true)
+			frame.setVisible(b);
+		else
+			frame.setVisible(b);
 	}
 }
