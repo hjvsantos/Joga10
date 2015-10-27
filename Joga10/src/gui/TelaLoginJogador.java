@@ -79,4 +79,11 @@ public class TelaLoginJogador {
 		passwordField.setBounds(138, 141, 158, 20);
 		frame.getContentPane().add(passwordField);
 	}
+
+	public void setVisible(boolean b) {
+		if(b == true)
+			frame.setVisible(b);
+		else
+			frame.setVisible(b);		
+	}
 }

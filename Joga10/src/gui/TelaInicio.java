@@ -10,10 +10,12 @@ import javax.swing.JButton;
 import gui.TelaLoginJogador;
 import gui.TelaLoginOlheiro;
 import gui.TelaLoginTime;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaInicio {
 
-	private JFrame frame;
+	private static JFrame frame;
 
 	/**
 	 * Launch the application.
@@ -64,10 +66,22 @@ public class TelaInicio {
 		frame.getContentPane().add(lblJoga);
 		
 		JButton btnOlheiro = new JButton("Olheiro");
+		btnOlheiro.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+ 				TelaInicio.setVisible(false); 
+				new TelaLoginOlheiro().setVisible(true);  
+			}
+		});
 		btnOlheiro.setBounds(84, 115, 89, 23);
 		frame.getContentPane().add(btnOlheiro);
 		
 		JButton btnJogador = new JButton("Jogador");
+		btnJogador.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaInicio.setVisible(false); 
+				new TelaLoginJogador().setVisible(true); 
+			}
+		});
 		btnJogador.setBounds(220, 115, 89, 23);
 		frame.getContentPane().add(btnJogador);
 		
@@ -76,15 +90,43 @@ public class TelaInicio {
 		frame.getContentPane().add(lblJSouCadastrado);
 		
 		JButton btnTime = new JButton("Time");
+		btnTime.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaInicio.setVisible(false); 
+				new TelaLoginTime().setVisible(true); 
+			}
+		});
 		btnTime.setBounds(152, 155, 89, 23);
 		frame.getContentPane().add(btnTime);
 		
-		JLabel lblSair = new JLabel("Sair");
-		lblSair.setBounds(10, 236, 46, 14);
-		frame.getContentPane().add(lblSair);
+		JButton btnNovoCadastro = new JButton("Novo Cadastro");
+		btnNovoCadastro.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaInicio.setVisible(false); 
+				new TelaCadastro().setVisible(true);
+			}
+		});
+		btnNovoCadastro.setBounds(316, 227, 108, 23);
+		frame.getContentPane().add(btnNovoCadastro);
 		
-		JLabel lblRegistreseAgora = new JLabel("Registre-se agora!");
-		lblRegistreseAgora.setBounds(152, 201, 108, 14);
-		frame.getContentPane().add(lblRegistreseAgora);
+		
+		JButton btnSair = new JButton("Sair");
+		btnSair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		btnSair.setBounds(10, 227, 89, 23);
+		frame.getContentPane().add(btnSair);
+		
+
+
+	}
+
+	protected static void setVisible(boolean b) {
+		if(b == true)
+			frame.setVisible(b);
+		else
+			frame.setVisible(b);		
 	}
 }

@@ -79,4 +79,13 @@ public class TelaLoginOlheiro {
 		passwordField.setBounds(126, 143, 181, 20);
 		frame.getContentPane().add(passwordField);
 	}
+
+	public void setVisible(boolean b) {
+		if(b == true)
+			frame.setVisible(b);
+		else
+			frame.setVisible(b);		
+	}
+
+	
 }
