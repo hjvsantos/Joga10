@@ -1,17 +1,15 @@
 package gui;
-
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.UIManager;
-
 import java.awt.Color;
-
 import javax.swing.JLabel;
-
 import java.awt.Font;
-
 import javax.swing.JButton;
+
+import gui.TelaLoginJogador;
+import gui.TelaLoginOlheiro;
+import gui.TelaLoginTime;
 
 public class TelaInicio {
 
