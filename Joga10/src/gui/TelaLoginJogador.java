@@ -9,10 +9,12 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.JPasswordField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaLoginJogador {
 
-	private JFrame frame;
+	private static JFrame frame;
 	private JTextField textField;
 	private JPasswordField passwordField;
 
@@ -67,6 +69,12 @@ public class TelaLoginJogador {
 		frame.getContentPane().add(btnEntrar);
 		
 		JButton btnVoltar = new JButton("Voltar");
+		btnVoltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaLoginJogador.setVisible(false);
+				new TelaInicio().setVisible(true);
+			}
+		});
 		btnVoltar.setBounds(170, 223, 89, 23);
 		frame.getContentPane().add(btnVoltar);
 		
@@ -80,7 +88,7 @@ public class TelaLoginJogador {
 		frame.getContentPane().add(passwordField);
 	}
 
-	public void setVisible(boolean b) {
+	public static void setVisible(boolean b) {
 		if(b == true)
 			frame.setVisible(b);
 		else

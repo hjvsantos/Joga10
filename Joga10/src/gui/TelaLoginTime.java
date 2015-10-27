@@ -9,10 +9,12 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.JPasswordField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaLoginTime {
 
-	private JFrame frame;
+	private static JFrame frame;
 	private JTextField textField_1;
 	private JPasswordField passwordField;
 
@@ -66,6 +68,12 @@ public class TelaLoginTime {
 		frame.getContentPane().add(btnEntrar);
 		
 		JButton btnVoltar = new JButton("Voltar");
+		btnVoltar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				TelaLoginTime.setVisible(false);
+				new TelaInicio().setVisible(true);
+			}
+		});
 		btnVoltar.setBounds(154, 217, 89, 23);
 		frame.getContentPane().add(btnVoltar);
 		
@@ -81,7 +89,7 @@ public class TelaLoginTime {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
-	public void setVisible(boolean b) {
+	public static void setVisible(boolean b) {
 		if(b == true)
 			frame.setVisible(b);
 		else

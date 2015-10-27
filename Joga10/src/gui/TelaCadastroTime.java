@@ -17,6 +17,8 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.JComboBox;
 
+import classesPrincipais.Time;
+
 public class TelaCadastroTime {
 
 	private static JFrame frame;
@@ -91,11 +93,13 @@ public class TelaCadastroTime {
 		lblEstado.setBounds(41, 103, 46, 14);
 		frame.getContentPane().add(lblEstado);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setMaximumRowCount(27);
-		comboBox.setToolTipText("Acre \r\nAlagoas\t \r\nAmap\u00E1\t \r\nAmazonas\t \r\nBahia\t \r\nCear\u00E1\t \r\nDistrito Federal\t \r\nEsp\u00EDrito Santo\t \r\nGoi\u00E1s\t \r\nMaranh\u00E3o\t \r\nMato Grosso\r\nMato Grosso do Sul \r\nMinas Gerais \r\nPar\u00E1\t\t \r\nPara\u00EDba\t\t \r\nParan\u00E1\t\t \r\nPernambuco \r\nPiau\u00ED \r\nRio de Janeiro\t \r\nRio Grande do Norte\t \r\nRio Grande do Sul\t \r\nRond\u00F4nia\t\t \r\nRoraima\t\t \r\nSanta Catarina\t \r\nS\u00E3o Paulo\t \r\nSergipe\t \r\nTocantins");
-		comboBox.setBounds(96, 100, 213, 20);
-		frame.getContentPane().add(comboBox);
+		JComboBox<String> comboBoxEstado = new JComboBox<String>();
+		comboBoxEstado.setFont(new Font("Gisha", Font.PLAIN, 13));
+		comboBoxEstado.setBounds(96, 100, 213, 20);
+		String[] arrayEstado = {"", "Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal", "Espirito Santo", "Goias", "Maranhão", "Mato Grosso","Mato Grosso do Sul", "Minas Gerais", "Pará","Paraiba", "Paraná", "Pernambuco", "Piaui",
+				"Rio de Janeiro", "Rio Grande do Norte", "Rio Grande do Sul", "Rondonia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocatins"};
+		for(int i = 0; i < 32; i++)
+			comboBoxEstado.addItem(arrayEstado[i]);
 		
 		JLabel lblVerba = new JLabel(" Verba:");
 		lblVerba.setBounds(41, 128, 46, 14);
