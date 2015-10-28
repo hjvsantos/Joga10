@@ -2,6 +2,7 @@ package classesPrincipais;
 
 import java.util.ArrayList;
 
+
 public class Time {
 
 	public String nome;
@@ -158,10 +159,5 @@ public class Time {
 		return true;
 	}
 
-
-
-	public void remove(Time time) {
-				
-	}
 	
 }
