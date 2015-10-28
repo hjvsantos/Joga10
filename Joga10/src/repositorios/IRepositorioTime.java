@@ -13,8 +13,6 @@ public interface IRepositorioTime {
 	public abstract void cadastrarTime(Time time);
 	
 	public abstract void removerTime(Time time);
-	
-	public abstract Time verificarLogin(String usuario, String senha);
-	
+		
 	public abstract boolean verificarCodigo(String codigo);
 }

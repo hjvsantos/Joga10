@@ -13,7 +13,7 @@ public class Time {
 	public String codigo; //Algo que funcione como o registro do time
 	private ArrayList<Olheiro> olheiros = new ArrayList<Olheiro>();
 	private ArrayList<Jogador> jogadoresObservados = new ArrayList<Jogador>();
-	public String usuario;
+	public static String usuario;
 	public String senha;
 	public String inscricao;
 	
@@ -62,7 +62,7 @@ public class Time {
 
 
 
-	public String getUsuario() {
+	public static String getUsuario() {
 		return usuario;
 	}
 
@@ -142,6 +142,26 @@ public class Time {
 		this.codigo = codigo;
 	}
 	
-	
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (!(obj instanceof Time))
+			return false;
+		Time other = (Time) obj;
+		if (nome == null) {
+			if (other.nome != null)
+				return false;
+		} else if (!nome.equals(other.nome))
+			return false;
+		return true;
+	}
+
+
+
+	public void remove(Time time) {
+				
+	}
 	
 }
