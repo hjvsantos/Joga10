@@ -63,7 +63,7 @@ public class ControladorJogador {
 			if (jogador != null){
 			int index = repositorioJogador.procurarIndice(jogador);
 			if (index != -1){
-				jogadorParaRemover = repositorioJogador.retornarJogador(jogador);
+				Jogador jogadorParaRemover = repositorioJogador.removerJogador(jogador);
 				if (jogadorParaRemover != null){
 					for (Jogador j: jogadorParaRemover){
 						repositorioJogador.removerJogador(j);

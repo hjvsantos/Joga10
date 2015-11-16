@@ -65,10 +65,10 @@ public class ControladorTime {
 		if (time != null){
 			int index = repositorioTime.procurarIndice(time);
 			if (index != -1){
-				produtosASeremRemovidos = repositorioProduto.retornarProdutosDoVendedor(vendedor);
+				TimesASeremRemovidos = repositorioTime.
 				if (produtosASeremRemovidos != null){
 					for (Produto p: produtosASeremRemovidos){
-						repositorioProduto.removerProduto(p);
+						repositorioTime.removerProduto(p);
 					}
 				}
 				repositorioVendedor.removerVendedor(vendedor);

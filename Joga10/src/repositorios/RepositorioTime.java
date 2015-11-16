@@ -1,6 +1,7 @@
 package repositorios;
 
 import java.io.File;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -13,6 +14,7 @@ import java.io.Serializable;
 
 import classesPrincipais.Time;
 import negocios.ControladorTime;
+import classesPrincipais.ComparatorTime;
 
 /**
  * @author joaolucassantos
@@ -20,7 +22,7 @@ import negocios.ControladorTime;
  */
 public class RepositorioTime {
 	private static final long serialVersionUID = 1L;
-	List<Time> time = new ArrayList<Time>();
+	ArrayList<Time> time = new ArrayList<Time>();
 	public static ControladorTime cadastroTime = new ControladorTime();
 	private static RepositorioTime instancia;
 	
@@ -81,29 +83,32 @@ public class RepositorioTime {
 	}
 	
 
-	public List<Time> getTime() {
+	public void ordenarime() {
 		if(this.time!=null)
-			Collections.sort(time);
-		return time;
-	}
+		{
+			ComparatorTime ct = new ComparatorTime();
+			Collections.sort(time, ct);
+			
+		}
 	
-	public void cadastrarTime(Time Time){
-		this.time.add((classesPrincipais.Time) time);
+	}
+	public void cadastrarTime(Time time){
+		this.time.add(time);
 	}
 	
 	public void atualizarTime(Time time, int posicao){
-		time.set(posicao, time);
+		this.time.set(posicao, time);
 	}
 	
 	public void removerTime(Time time) {
-		time.remove(time);
+		this.time.remove(time);
 	}
 	
 	public Time retornarTime(String usuario){
 		Time time = null;
-		for (int i = 0; i < time.size(); i++){
-			if (time.get(i).getUsuario().equals(usuario)) {		
-				time = time.getUsuario(i);
+		for (int i = 0; i <this.time.size(); i++){
+			if (this.time.get(i).getUsuario().equals(usuario)) {		
+				time = this.time.get(i);
 				break;
 			}
 		}
@@ -114,7 +119,7 @@ public class RepositorioTime {
 		boolean nomeUsuarioJaExiste = false;
 		if (usuario != null){
 			if(time.size() > 0) {
-				for (int i = 0; i < time.size(); i++){
+				for (int i = 0; i < this.time.size(); i++){
 					if (time.get(i).getUsuario().equals(usuario)) {
 						nomeUsuarioJaExiste = true;
 						break;
@@ -127,8 +132,8 @@ public class RepositorioTime {
 	
 	public int procurarIndice(Time time){
 		int retAux = -1;
-		for (int i = 0; i < time.size(); i++){
-			if (time.get(i).getUsuario().equals(time.getUsuario())){
+		for (int i = 0; i < this.time.size(); i++){
+			if (this.time.get(i).getUsuario().equals(time.getUsuario())){
 				retAux = i;
 				break;
 			}

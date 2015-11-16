@@ -3,7 +3,7 @@ package classesPrincipais;
 import java.util.ArrayList;
 
 
-public class Time {
+public class Time implements Comparable <Time>{
 
 	public String nome;
 	public String Estado;
@@ -63,7 +63,7 @@ public class Time {
 
 
 
-	public static String getUsuario() {
+	public String getUsuario() {
 		return usuario;
 	}
 
@@ -158,6 +158,8 @@ public class Time {
 			return false;
 		return true;
 	}
-
 	
+	 public int compareTo(Time time) {
+	        return this.nome.compareTo(time.getNome());
+	}
 }

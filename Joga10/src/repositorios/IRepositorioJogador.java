@@ -19,7 +19,9 @@ public interface IRepositorioJogador {
 	
 	public abstract Jogador verificarLogin(String usuario, String senha);
 	
-	public abstract Jogador retornarJogador(String usuario);
+	public abstract Jogador retornarJogador(Jogador jogador);
 	
 	public abstract boolean verificarRegistro(double registro);
+
+	public abstract int procurarIndice(Jogador jogador);
 }
