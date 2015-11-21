@@ -1,5 +1,6 @@
 package classesPrincipais;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 
@@ -17,6 +18,7 @@ public class Olheiro {
 	public String email;
 	public double preçoServiço;
 	public String usuario;
+	private ArrayList<Jogador> jogadoresObservados = new ArrayList<Jogador>();
 	public String senha;
 	
 	public Olheiro(String nome, String empregador, double registro,
@@ -157,6 +159,9 @@ public class Olheiro {
 		this.email = email;
 	}
 	
+	public void adicionarJogador(Jogador jogador){
+		
 	
+	}
 	
 }
