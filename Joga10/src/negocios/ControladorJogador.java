@@ -47,7 +47,7 @@ public class ControladorJogador {
 				Utilidades.nomeNosConformes(jogador.getNome());
 
 				//chamar método nomeUsuarioNosConforme e senha tb.		
-				nomeUsuarioJaExiste = repositorioTime.verificarNomeUsuarioJaExiste(Time.getUsuario());
+				nomeUsuarioJaExiste = repositorioJogador.verificarNomeUsuarioJaExiste(Jogador.getUsuario());
 				if (usuarioExistente == false && nomeUsuarioJaExiste == false){
 					repositorioJogador.cadastrarJogador(jogador);
 				} else if (usuarioExistente){
@@ -59,7 +59,7 @@ public class ControladorJogador {
 		}
 	}
 	
-	public void removerJogador(Jogador jogador) throws UsuarioNaoEncontradoException { //criar essa exception
+	public void removerJogador(Jogador jogador) throws UsuarioNaoEncontradoException { 
 			if (jogador != null){
 			int index = repositorioJogador.procurarIndice(jogador);
 			if (index != -1){

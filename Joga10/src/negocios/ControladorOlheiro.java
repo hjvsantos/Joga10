@@ -17,4 +17,15 @@ import classesPrincipais.Goleiro;
 
 public class ControladorOlheiro {
 	
+	private IRepositorioTime repositorioTime;
+	private IRepositorioOlheiro repositorioOlheiro;
+	private IRepositorioJogador repositorioJogador;
+	private LocalDate dia;
+	
+	public LocalDate getDia() {
+		return dia;
+	}
+	
+	
+	
 }
