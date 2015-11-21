@@ -75,7 +75,8 @@ public class TelaCadastro {
 		btnTime.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				TelaCadastro.setVisible(false); 
-				new TelaCadastroTime().setVisible(true);
+				new TelaCadastroTime();
+				TelaCadastroTime.setVisible(true);
 			}
 		});
 		btnTime.setBounds(156, 184, 89, 23);
