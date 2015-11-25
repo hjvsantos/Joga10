@@ -47,7 +47,7 @@ public class TelaPrincipalOlheiro {
 		frame.getContentPane().setLayout(null);
 		
 		txtPesquisarJogadorPor = new JTextField();
-		txtPesquisarJogadorPor.setText("Pesquisar jogador por palavra chave, nome ou idade");
+		txtPesquisarJogadorPor.setText("Pesquisar jogador por posi\u00E7\u00E3o, nome ou idade");
 		txtPesquisarJogadorPor.setBounds(10, 10, 322, 26);
 		frame.getContentPane().add(txtPesquisarJogadorPor);
 		txtPesquisarJogadorPor.setColumns(10);

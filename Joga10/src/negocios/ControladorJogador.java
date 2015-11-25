@@ -18,7 +18,7 @@ import classesPrincipais.Goleiro;
 public class ControladorJogador {
 
 	private IRepositorioTime repositorioTime;
-	private IRepositorioOlheiro repositorioOlheiro;
+	private RepositorioOlheiro repositorioOlheiro;
 	private IRepositorioJogador repositorioJogador;
 	private LocalDate dia;
 	
@@ -29,14 +29,14 @@ public class ControladorJogador {
 	public ControladorJogador(){
 		this.repositorioTime = (IRepositorioTime) RepositorioTime.getInstancia();
 		this.repositorioOlheiro = RepositorioOlheiro.getInstancia();
-		this.repositorioJogador = RepositorioJogador.getInstancia();
+		this.repositorioJogador = (IRepositorioJogador) RepositorioJogador.getInstancia();
 		
 		public void cadastrarJogador(Jogador jogador) throws UsuarioCurtoException, UsuarioLongoException, UsuarioExistenteException, SenhaCurtaException, SenhaLongaException{
 			boolean usuarioExistente=(Boolean) null;
 			boolean nomeUsuarioJaExiste=(Boolean) null;
 			
 			if (jogador == null){
-				throw new IllegalArgumentException();// o que fazer quando null?
+				throw new IllegalArgumentException(); // o que fazer quando null?
 			} else {
 				if (Utilidades.nomeUsuarioNosConformes(jogador.getUsuario())){
 
@@ -45,9 +45,8 @@ public class ControladorJogador {
 				}
 				
 				Utilidades.nomeNosConformes(jogador.getNome());
-
-				//chamar método nomeUsuarioNosConforme e senha tb.		
-				nomeUsuarioJaExiste = repositorioJogador.verificarNomeUsuarioJaExiste(Jogador.getUsuario());
+	
+				nomeUsuarioJaExiste = repositorioJogador.verificarNomeUsuarioJaExiste(jogador.getUsuario());
 				if (usuarioExistente == false && nomeUsuarioJaExiste == false){
 					repositorioJogador.cadastrarJogador(jogador);
 				} else if (usuarioExistente){

@@ -14,7 +14,7 @@ public class Time implements Comparable <Time>{
 	public String codigo; //Algo que funcione como o registro do time
 	private ArrayList<Olheiro> olheiros = new ArrayList<Olheiro>();
 	private ArrayList<Jogador> jogadoresObservados = new ArrayList<Jogador>();
-	public static String usuario;
+	public String usuario;
 	public String senha;
 	public String inscricao;
 	
@@ -30,7 +30,7 @@ public class Time implements Comparable <Time>{
 		this.telefone = telefone;
 		this.codigo = codigo;
 		this.olheiros = olheiros;
-		this.jogadoresObservados = jogadoresObservados;
+		this.setJogadoresObservados(jogadoresObservados);
 		this.senha = senha;
 		this.usuario = usuario;
 		this.inscricao = inscricao;
@@ -161,6 +161,18 @@ public class Time implements Comparable <Time>{
 	
 	 public int compareTo(Time time) {
 	        return this.nome.compareTo(time.getNome());
+	}
+
+
+
+	public ArrayList<Jogador> getJogadoresObservados() {
+		return jogadoresObservados;
+	}
+
+
+
+	public void setJogadoresObservados(ArrayList<Jogador> jogadoresObservados) {
+		this.jogadoresObservados = jogadoresObservados;
 	}
 	 
 	 
